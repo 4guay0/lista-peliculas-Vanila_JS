@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Registro de Películas</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+   <link rel="stylesheet" href="/css/estilos.css" />
+   <script src="./js/formulario.js"></script>
+</head>
+
+<body>
+   <h1>Registro de Películas</h1>
+   <!-- Se crea el contenedor de contenido -->
+   <div class="contenido">
+      <!-- Contenedor para el formulario -->
+      <div class="contenedor">
+         <h2>Películas Formulario</h2>
+         <form autocomplete="off" onsubmit="return false">
+            <div class="elemento">
+               <label for="nombre">Nombre:</label><br />
+               <input type="text" name="nombre" id="nombre" /><br />
+            </div>
+            <div class="elemento">
+               <label for="genero">Genero:</label><br />
+               <select id="genero" name="genero">
+                  <option value="Acción">Acción</option>
+                  <option value="Infantil">Infantil</option>
+                  <option value="Drama">Drama</option>
+                  <option value="Ciencia ficción">Ciencia ficción</option>
+                  <option value="Comedia">Comedia</option>
+                  <option value="Documental">Documental</option>
+                  <option value="Romance">Romance</option>
+                  <option value="Terror">Terror</option>
+               </select><br />
+            </div>
+            <div class="elemento">
+               <label for="descripcion">Descripción:</label><br />
+               <textarea name="descripcion" id="descripcion" maxlength="1023"
+                  placeholder="Máximo 1023 caracteres"></textarea>
+            </div>
+            <input class="boton" type="submit" value="Guardar" onclick="guardar()" />
+         </form>
+      </div>
+      <!-- Contenedor para visualizar la lista de películas registradas -->
+      <div class="contenedor">
+         <div id="tituloRegistro">
+            <h2>Peliculas Lista #0.</h2><br />
+         </div>
+         <div class="registro">
+            <div id="registro">
+
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
